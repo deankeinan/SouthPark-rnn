@@ -36,9 +36,9 @@ Definitely fun to read through samples here, and maybe I could find a silly use 
 After 19 seasons, you still see occasional strings of nonsense text mid-dialogue even at lower temperatures. Part of this I'm attributing to the inclusion of songs and emotive phrasing in the data. (i.e "But mommmm!")
 
 I see a few methods of getting more satisfying results and most of them involve manipulating the data to narrow the view of the training model.
--Limiting the data to one character (Cartman, for example)
--Removing non-major characters lines
--Removing songs and non-english words
+- Limiting the data to one character (Cartman, for example)
+- Removing non-major characters lines
+- Removing songs and non-english words
 
 With more research into making my own RNN for this type of project, maybe I could gear one specifically to deal with the caveats of reading scripts with multiple characters.
 
