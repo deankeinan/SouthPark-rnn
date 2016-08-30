@@ -32,7 +32,7 @@ Steadily increasing the temperature, we get more variance in phrasing but more s
 
 Definitely fun to read through samples here, and maybe I could find a silly use for them. Being a fan of the show it's fun subvocalizing the nonsense in the voices of the characters. In the repository I've included a 60,000 length sample at this temperature in case anyone is looking for inspiration.
 
-###Moving forward
+###Final Thoughts
 After 19 seasons, you still see occasional strings of nonsense text mid-dialogue even at lower temperatures. Part of this I'm attributing to the inclusion of songs and emotive phrasing in the data. (i.e "But mommmm!")
 
 I see a few methods of getting more satisfying results and most of them involve manipulating the data to narrow the view of the training model.
@@ -57,5 +57,4 @@ Enjoy!
 ![alt text](images/h5.png "Some sampled text")
 
 
-And I'm sure there's more funny ones in there I haven't seen. 
-
+And I'm sure there's more entertaining ones in there I haven't seen. 
