@@ -15,7 +15,10 @@ Training the model took roughly 7 hours without enabling GPU acceleration. Thank
 
 ## Results
 
-Sampling the text produced some interesting results, especially while varying the '-temperature' flag (which varies the level of noise in the sample generation). 10 samples through the model at different temperatures can be found in the repository.
+*Note: 10 samples at different temperatures can be found [in the repository](samples/).*
+
+Sampling the text produced some interesting results, especially while varying the 	
+`-temperature` flag (which varies the level of noise in the sample generation). 
 
 At lower temperatures we see little to no spelling errors but highly repetitive phrasing, as you can see here:
 
@@ -27,7 +30,7 @@ Steadily increasing the temperature, we get more variance in phrasing but more s
 
 ![alt text](images/temp07.png "Some sampled text at Temperature 0.7")
 
-Even here, though, there are issues I'd have liked to avoid.
+Definitely fun to read through samples here, and maybe I could find a silly use for them. In the repository I've included a 60,000 length sample at this temperature in case anyone is looking for inspiration.
 
 ###Thoughts
 After 19 seasons, you still see occasional strings of nonsense text mid-dialogue even at lower temperatures. Part of this I'm attributing to the inclusion of songs and emotive phrasing in the data. (i.e "But mommmm!")
