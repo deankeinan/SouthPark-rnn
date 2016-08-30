@@ -36,7 +36,7 @@ Definitely fun to read through the nonsense samples here, and maybe I could find
 After 19 seasons of text (roughly 5.1MB) the nonsense is of a very high degree even at lower temperatures. I mostly attribute this to the fact that I fed the entire bulk text into torch-rnn without prior manipulation and entirely experimentally.
 
 I see a few methods of getting more satisfying results and most of them involve manipulating the data to narrow the view of the training model.
-- Limiting the data to one character (Cartman, for example)
+- Limiting the data to one character
 - Removing non-major characters lines
 - Removing songs, non-english words, and emotive phrasing in the data. (i.e "But mommmm!")
 
