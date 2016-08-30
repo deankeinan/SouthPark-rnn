@@ -47,14 +47,14 @@ Enjoy!
 ##Highlights
 
 ![alt text](images/h1.png "Some sampled text")
-1
+*****
 ![alt text](images/h2.png "Some sampled text")
-2
+*****
 ![alt text](images/h3.png "Some sampled text")
-3
+*****
 ![alt text](images/h4.png "Some sampled text")
-4
+*****
 ![alt text](images/h5.png "Some sampled text")
-5
+
 
 And I'm sure there's more funny ones in there I haven't seen. 
