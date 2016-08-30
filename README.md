@@ -15,7 +15,7 @@ Training the model took roughly 7 hours without enabling GPU acceleration. Thank
 
 ## Results
 
-*Note: 10 samples at different temperatures can be found [in the repository](samples/).*
+*Note: 10 samples at different temperatures can be found [in the repository](https://github.com/deankeinan/SouthPark-rnn/tree/master/Samples).*
 
 Sampling the text produced some interesting results, especially while varying the 	
 `-temperature` flag (which varies the level of noise in the sample generation). 
