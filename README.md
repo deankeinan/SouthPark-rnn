@@ -28,7 +28,7 @@ However, this varied sample to sample.
 
 ## Results
 
-*Note: 10 samples at different temperatures can be found [in the repository](https://github.com/deankeinan/SouthPark-rnn/tree/master/Samples).*
+*Note: 10 samples at different temperatures can be found [in the repository](https://github.com/deankeinan/SouthPark-rnn/tree/master/samples).*
 
 Sampling the text produced some interesting results, especially while varying the 	
 `-temperature` flag (which varies the level of noise in the sample generation). 
