@@ -1,17 +1,30 @@
 # SouthPark-rnn
 ## Feeding a neural network 19 seasons of South Park
 
-###Acknowledgments
-This was my first time experimenting with anything machine learning and couldn't have been done without [torch-rnn](https://github.com/jcjohnson/torch-rnn), the help of this guide [here](http://www.jeffreythompson.org/blog/2016/03/25/torch-rnn-mac-install/) by Jeffrey Thompson, and of course the massive collection of data cleaned and compiled by Bob Adams [here](https://github.com/BobAdamsEE/SouthParkData). Going forward, I hope to revisit this when I've got a deeper insight into working with data.
+### Acknowledgments
+This was my first time experimenting with anything machine learning and couldn't have been done without [torch-rnn](https://github.com/jcjohnson/torch-rnn), the help of this guide [here](http://www.jeffreythompson.org/blog/2016/03/25/torch-rnn-mac-install/) by Jeffrey Thompson, and of course the massive collection of data cleaned and compiled by Bob Adams [here](https://github.com/BobAdamsEE/SouthParkData). 
 
-### Training a model on 19 seasons
-After a series of hiccups setting up torch-rnn on my macbook, I decided to put it to the test and trained it on a single season of South Park at first. The results were hardly coherent with the occasional whole word or phrase shining through. I don't think I got a screen grab of that but it was basically trash. 
+### Goal
+Inspired by the guides above, I wanted to follow the same procedure, but using transcripts from South Park episodes as the corpus. An ultimate goal would be to witness a true-to-character conversation between two or more characters. Given my limited insight on machine learning, I ran the experiment to satisfy curiosity and am sharing the results. Going forward, I hope to revisit this.
 
-So, I cleaned up the Bob Adams .csv (linked above) into a fat plaintext file you can find in the repository under `/data/sp-big.txt` and preprocessed it.
+### Procedure
+I followed the torch-rnn guide for Mac linked above almost the entire way through. I converted the Bob Adams .csv (also linked above) into a large .txt file containing a transcript from every season. It's a series of character names followed by dialogue, separated by line breaks. The preprocessing script:
+
+`python scripts/preprocess.py --input_txt data/big-sp.txt --output_h5 data/big-sp.h5 --output_json data/big-sp.json`
 
 ![alt text](images/preprocessed.png "Even for 19 seasons that's a lot of Token's.")
 
-Training the model took roughly 7 hours without enabling GPU acceleration. Thankfully it didn't melt my laptop, and I think I could have been multitasking during the process. 
+Then to train the model:
+
+`th train.lua -input_h5 data/big-sp.h5 -input_json data/big-sp.json -gpu -1`
+
+The process took 7 hours without GPU acceleration and thankfully, did not melt my laptop like I expected.
+
+Finally, the sampling:
+
+` th sample.lua -checkpoint cv/checkpoint_81800.t7 -length 2000 -gpu -1 -temperature 0.7 > ~/Dev/SouthPark-rnn/samples/temp0.7/sample_1.txt`
+
+However, this varied sample to sample.
 
 ## Results
 
